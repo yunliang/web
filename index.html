@@ -4,12 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>个人测试2</title>
     <script>
-        var token = "xxx";
-        console.log(token)
-        document.getElementById('access-token').innerText = "Access Token: " + token + "";
+        //var token = localStorage.getItem("access_token");
+        console.log(access_token);
+                console.log(window.access_token);
+        document.getElementById('access-token').innerText = window.access_token;
     </script>
 </head>
 <body>
-    <div id="access-token"></div>
+    <div id="access-token">aaaaa</div>
 </body>
 </html>
