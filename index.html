@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Access Token</title>
+</head>
+<body>
+    <div id="access-token"></div>
+
+    <script>
+        function aa() {
+            try{
+                console.log("["+accessToken+"]");
+                console.log("start")
+                console.log(localStorage.getItem("access_token"))
+                console.log("end")
+            }catch(error){
+                console.log(error);
+            }
+            // body...
+        }
+        // 获取注入的 access_token 变量的值
+        var accessToken = window.access_token;
+
+        // 将 access_token 的值显示在页面上
+        document.getElementById('access-token').innerText = "Access Token: " + accessToken;
+    </script>
+    <button onClick="aa()">aaaaa</button>
+</body>
+</html>
