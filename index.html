@@ -3,18 +3,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>个人测试2</title>
-
-</head>
-<body>
-    <div id="access-token"></div>
-    <button onClick="out()">test</button>
-</body>
     <script>
-        function out(){
-            window.flutter_inappwebview.callHandler("tokenInvalid")
-        }
-        var token = localStorage.getItem("access_token");
+        var token = "xxx";
         console.log(token)
         document.getElementById('access-token').innerText = "Access Token: " + token + "";
     </script>
+</head>
+<body>
+    <div id="access-token"></div>
+</body>
 </html>
