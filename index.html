@@ -2,15 +2,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人测试</title>
+    <title>个人测试2</title>
 </head>
 <body>
     <div id="access-token"></div>
-
+    <div id="access-token1"></div>
     <script>
         function aa() {
             try{
-                console.log("["+accessToken+"]");
+                console.log("["+window.access_token+"]");
                 console.log("start")
                 console.log(localStorage.getItem("access_token"))
                 console.log("end")
@@ -21,9 +21,11 @@
         }
         // 获取注入的 access_token 变量的值
         var accessToken = window.access_token;
+        var text = localStorage.getItem("access_token");
 
         // 将 access_token 的值显示在页面上
         document.getElementById('access-token').innerText = "Access Token: " + accessToken;
+        document.getElementById('access-token1').innerText = "Access Token text: " + text;
     </script>
     <button onClick="aa()">aaaaa</button>
 </body>
