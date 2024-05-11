@@ -7,8 +7,12 @@
 </head>
 <body>
     <div id="access-token"></div>
+    <button onClick="out()">test</button>
 </body>
     <script>
+        function out(){
+            window.flutter_inappwebview.callHandler("tokenInvalid",documentHeight)
+        }
         var token = localStorage.getItem("access_token");
         console.log(token)
         document.getElementById('access-token').innerText = "Access Token: " + token + "";
