@@ -2,15 +2,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人测试2</title>
-    <script>
-        //var token = localStorage.getItem("access_token");
-        console.log(access_token);
-                console.log(window.access_token);
-        document.getElementById('access-token').innerText = window.access_token;
-    </script>
+    <title>Display Access Token</title>
 </head>
 <body>
-    <div id="access-token">aaaaa</div>
+    <div id="access-token"></div>
+
+    <script>
+        function aa() {
+            try{
+                console.log("start")
+                var test = window.flutter_inappwebview.callHandler("getToken");
+                console.log(test)
+            }catch(error){
+                console.log(error);
+            }
+            // body...
+        }
+
+    </script>
+    <button onClick="aa()">aaaaa1</button>
 </body>
 </html>
